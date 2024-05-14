@@ -23,7 +23,7 @@ import {
 } from "@/components/ui/select.tsx";
 import { langsProps, setLanguage } from "@/i18n.ts";
 import { cn } from "@/components/ui/lib/utils.ts";
-import Github from "@/components/ui/icons/Github.tsx";
+// import Github from "@/components/ui/icons/Github.tsx";
 import { Slider } from "@/components/ui/slider.tsx";
 import Tips from "@/components/Tips.tsx";
 import { Button } from "@/components/ui/button.tsx";
@@ -38,13 +38,13 @@ import {
   AlertDialogTitle,
   AlertDialogTrigger,
 } from "@/components/ui/alert-dialog.tsx";
-import { isTauri } from "@/utils/desktop.ts";
-import { Badge } from "@/components/ui/badge.tsx";
+// import { isTauri } from "@/utils/desktop.ts";
+// import { Badge } from "@/components/ui/badge.tsx";
 
 function SettingsDialog() {
   const { t, i18n } = useTranslation();
   const dispatch = useDispatch();
-  const desktop = isTauri();
+  // const desktop = isTauri();
 
   const open = useSelector(settings.dialogSelector);
 
@@ -371,7 +371,7 @@ function SettingsDialog() {
                     ? memorySize.toFixed(2) + " MB"
                     : t("unknown")}
                 </p>
-                <a
+                {/* <a
                   className={`flex flex-row items-center`}
                   href={`https://github.com/Deeptrain-Community/chatnio`}
                 >
@@ -380,7 +380,7 @@ function SettingsDialog() {
                   />
                   chatnio v{version}
                   {desktop && <Badge className={`ml-1`}>App</Badge>}
-                </a>
+                </a> */}
               </div>
             </div>
           </DialogDescription>

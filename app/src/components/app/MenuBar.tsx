@@ -12,25 +12,25 @@ import {
 } from "@/components/ui/dropdown-menu.tsx";
 import { Button } from "@/components/ui/button.tsx";
 import {
-  Boxes,
-  CalendarPlus,
+  // Boxes,
+  // CalendarPlus,
   Cloud,
   CloudOff,
-  Gift,
-  ListStart,
-  Plug,
+  // Gift,
+  // ListStart,
+  // Plug,
   Shield,
   User,
 } from "lucide-react";
-import { openDialog as openSub } from "@/store/subscription.ts";
-import { openDialog as openPackageDialog } from "@/store/package.ts";
-import { openDialog as openInvitationDialog } from "@/store/invitation.ts";
-import { openDialog as openSharingDialog } from "@/store/sharing.ts";
-import { openDialog as openApiDialog } from "@/store/api.ts";
+// import { openDialog as openSub } from "@/store/subscription.ts";
+// import { openDialog as openPackageDialog } from "@/store/package.ts";
+// import { openDialog as openInvitationDialog } from "@/store/invitation.ts";
+// import { openDialog as openSharingDialog } from "@/store/sharing.ts";
+// import { openDialog as openApiDialog } from "@/store/api.ts";
 import router from "@/router.tsx";
 import { deeptrainEndpoint } from "@/conf/env.ts";
 import React from "react";
-import { subscriptionDataSelector } from "@/store/globals.ts";
+// import { subscriptionDataSelector } from "@/store/globals.ts";
 import { openWindow } from "@/utils/device.ts";
 import { DeeptrainOnly } from "@/conf/deeptrain.tsx";
 
@@ -46,7 +46,7 @@ function MenuBar({ children, className }: MenuBarProps) {
   const quota = useSelector(quotaSelector);
   const admin = useSelector(selectAdmin);
 
-  const subscriptionData = useSelector(subscriptionDataSelector);
+  // const subscriptionData = useSelector(subscriptionDataSelector);
 
   return (
     <DropdownMenu>
@@ -67,7 +67,7 @@ function MenuBar({ children, className }: MenuBarProps) {
             </>
           )}
         </DropdownMenuItem>
-        {subscriptionData.length > 0 && (
+        {/* {subscriptionData.length > 0 && (
           <DropdownMenuItem onClick={() => dispatch(openSub())}>
             <CalendarPlus className={`h-4 w-4 mr-1`} />
             {t("sub.title")}
@@ -90,7 +90,7 @@ function MenuBar({ children, className }: MenuBarProps) {
         <DropdownMenuItem onClick={() => dispatch(openApiDialog())}>
           <Plug className={`h-4 w-4 mr-1`} />
           {t("api.title")}
-        </DropdownMenuItem>
+        </DropdownMenuItem> */}
         <DeeptrainOnly>
           <DropdownMenuItem
             onClick={() => openWindow(`${deeptrainEndpoint}/home`)}
